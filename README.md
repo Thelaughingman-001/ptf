@@ -23,8 +23,8 @@ PTF requires python-pexpect in order to work appropriately.
 Run the following command below:
 
 ```
-pip install -r requirements.txt
-./ptf
+sudo pip install -r requirements.txt
+sudo ./ptf
 ```
 
 ### Instructions:
@@ -39,7 +39,7 @@ For a video tutorial on how to use PTF, check out our Vimeo page here: https://v
 
 If you want to install and/or update everything, simply do the following:
 ```
-./ptf
+sudo ./ptf
 use modules/install_update_all
 yes
 ```
@@ -51,7 +51,7 @@ You can also individually install each module, then use the  use modules/update_
 For example:
 
 ```
-./ptf
+sudo ./ptf
 use modules/update_installed
 ```
 
@@ -62,7 +62,7 @@ You can also show options to change information about the modules.
 If you only want to install only for example exploitation tools, you can run:
 
 ```
-./ptf
+sudo ./ptf
 use modules/exploitation/install_update_all
 ```
 
@@ -80,7 +80,7 @@ modules/post-exploitation/unicorn
 Then when in PTF:
 
 ```
-./ptf
+sudo ./ptf
 use modules/custom_list/list
 yes
 ```
@@ -90,7 +90,7 @@ This allows you to carry your module configuration over and only install the too
 You can also simply specify a module without using the category:
 
 ```
-./ptf
+sudo ./ptf
 use trevorc2
 yes
 ```
@@ -170,7 +170,7 @@ You can also just run `./ptf --update-all` and it will automatically update ever
 If you're running `ptf` in an automatic build, you can use a [heredoc](http://tldp.org/LDP/abs/html/here-docs.html) so you don't have to interactively type the modules you wish to install. Example:
 
 ```
-./ptf <<EOF
+sudo ./ptf <<EOF
 use modules/exploitation/metasploit
 run
 use modules/password-recovery/johntheripper
@@ -204,9 +204,9 @@ The `INCLUDE_ONLY_THESE_MODULES` in the config option under config/ptf.config wi
 You can launch PTF with no banner message if you want. Simply specify:
 
 ```
-./ptf --no-banner
+sudo ./ptf --no-banner
 
 or 
 
-./ptf -nb
+sudo ./ptf -nb
 ```
